@@ -169,8 +169,6 @@ function submitGuess(waitForAnimation = true) {
 		}
 	})
 
-    updateKeyboardColors()
-
 	let animationTime = 500
 	// animate tiles flipping over one by one
 	guess.forEach((letter, position) => {
@@ -188,6 +186,7 @@ function submitGuess(waitForAnimation = true) {
 		// wait for all tiles to flip
 		inputEnabled = false
 		setTimeout(() => {
+            updateKeyboardColors()
 			if (typedSoFar === word) {
 				triggerWinScreen()
 			} else if (guessOn >= currentWord.length) {
@@ -199,6 +198,7 @@ function submitGuess(waitForAnimation = true) {
 			}
 		}, (guess.length * animationTime) / 1.5)
 	} else {
+        updateKeyboardColors()
 		if (typedSoFar === word) {
 			setTimeout(() => triggerWinScreen(false), (guess.length * animationTime) / 1.5)
 		} else if (guessOn >= currentWord.length) {
