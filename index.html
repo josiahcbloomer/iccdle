@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ICCdle</title>
+
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./tabler-icons.min.css">
+	</head>
+	<body>
+        <header>
+            <div class="left">
+                <div class="logo-container">
+                    <span class="tile green flipped"><p>I</p></span>
+                    <span class="tile green flipped"><p>C</p></span>
+                    <span class="tile green flipped"><p>C</p></span>
+                    <span class="tile grey flipped"><p>D</p></span>
+                    <span class="tile grey flipped"><p>L</p></span>
+                    <span class="tile grey flipped"><p>E</p></span>
+                </div>
+            </div>
+            <div class="right">
+                <a href="javascript:void(0)" onclick="openPopup('stats')" class="header-button">
+                    <i class="ti ti-chart-bar"></i>
+                </a>
+                <a href="javascript:void(0)" onclick="openPopup('help')" class="header-button">
+                    <i class="ti ti-help"></i>
+                </a>
+            </div>
+        </header>
+		<div class="container">
+			<div class="board">
+				<div class="row"></div>
+			</div>
+		</div>
+        <div class="keyboard"></div>
+
+        <div class="stats-screen">
+            <div class="bg"></div>
+            <div class="main pop-stats">
+                <h1 class="popup-title">Stats</h1>
+                <h2 class="win-msg"></h2>
+                <br>
+                <div class="stat-columns">
+                    <div>
+                        <span class="stat stat-played"></span>
+                        <p>Played</p>
+                    </div>
+                    <div>
+                        <span class="stat stat-wins"></span>
+                        <p>Wins</p>
+                    </div>
+                    <div>
+                        <span class="stat stat-streak"></span>
+                        <p>Streak</p>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <a class="share-button" onclick="share()">
+                    <i class="ti ti-share"></i>
+                    Share
+                </a>
+                <a href="javascript:void(0)" onclick="closePopup()" class="close-button" onclick="closePopup()">
+                    <i class="ti ti-x"></i>
+                </a>
+            </div>
+            <div class="main pop-help">
+                <h1 class="popup-title">How to play</h1>
+                <p>
+                    Guess the ICC-related word or acronym in the given number of guesses.<br>
+                    Words can be between 4 and 7 letters long.<br>
+                    You will be given one guess for each letter in the word, plus one.
+                    <br><br>
+                    Grey = The letter is not in the word<br>
+                    Yellow = The letter is in the word, but in the wrong position<br>
+                    Green = letter is in the correct position in the word
+                </p>
+                
+                <a href="javascript:void(0)" onclick="closePopup()" class="close-button" onclick="closePopup()">
+                    <i class="ti ti-x"></i>
+                </a>
+            </div>
+        </div>
+
+		<script src="./script.js"></script>
+	</body>
+</html>
