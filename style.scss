@@ -307,6 +307,8 @@ header {
                 &.enter { font-size: 10px}
             }
 
+            transition: background .3s, color .3s;
+
             &.green { background: #27a800 }
             &.yellow { background: #beb100 }
             &.grey {
