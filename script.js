@@ -68,6 +68,8 @@ async function getTodaysWord() {
 		(todayDate.getTime() - new Date("2024-03-31").getTime()) / (1000 * 60 * 60 * 24)
 	)
 
+	dayOn = dayOn % fullWordList.length
+
 	// dayOn = Math.floor(Math.random() * (fullWordList.length - 1)) // TEMMP
 
 	// get word from list
